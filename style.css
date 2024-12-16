@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(26, 27, 38, 1);
+  color: rgb(125, 207, 255, 1);
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  width: 70%;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.header {
+  font-size: 5rem;
+  margin: 5rem 0 5rem 0;
+}
+
+.title {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: "500";
+  font-style: normal;
+  font-size: 5rem;
+  color: rgb(158, 206, 106, 1);
+  margin-bottom: 1rem;
+}
+.subtitle {
+  font-weight: 200;
+  font-size: 4rem;
+}
+
+.content-container {
+  margin-top: 1.5rem;
+}
+
+.title-article {
+  font-size: 4rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+  margin-bottom: 5rem;
+}
+.article-link {
+  font-size: 1.2rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: "700";
+  /* color: white; */
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
