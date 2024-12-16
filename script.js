@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const data = await response.json();
-    console.log("Full API response:", data);
 
     const articlesArray = data.sort(
       (b, a) => new Date(b.published_at) - new Date(a.published_at)
@@ -40,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Create link element
       const articleLink = document.createElement("a");
       articleLink.href = article.url;
+      articleLink.target = "_blank";
 
       // Create title element
       const titleArticle = document.createElement("p");
