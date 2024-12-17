@@ -15,11 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
     const contentContainer = document.querySelector(".content-container");
 
-    // Clear existing dynamic content
     contentContainer.innerHTML = "";
 
     articlesArray.forEach((article, index) => {
-      // Create a new container for each article
       const newContainer = document.createElement("div");
       newContainer.classList.add("content-container");
 
@@ -31,34 +29,35 @@ document.addEventListener("DOMContentLoaded", async () => {
           day: "numeric",
         }
       );
-      // Create date element
-      const datePublished = document.createElement("p");
-      datePublished.classList.add("article-link");
-      datePublished.textContent = formattedDate;
 
-      // Create link element
+      const nameAndDate = `${article.postname} | ${formattedDate}`;
+
+      //   const datePublished = document.createElement("p");
+      //   datePublished.classList.add("article-link");
+      //   datePublished.textContent = formattedDate;
+
+      const postname = document.createElement("p");
+      postname.classList.add("article-name");
+      postname.textContent = nameAndDate;
+
       const articleLink = document.createElement("a");
-      articleLink.href = article.url;
       articleLink.target = "_blank";
+      articleLink.href = article.url;
 
-      // Create title element
       const titleArticle = document.createElement("p");
       titleArticle.classList.add("title-article");
       titleArticle.textContent = article.title;
 
-      // Assemble the container
       articleLink.appendChild(titleArticle);
-      newContainer.appendChild(datePublished);
+      newContainer.appendChild(postname);
       newContainer.appendChild(articleLink);
 
-      // Add to the parent
       contentContainer.parentNode.insertBefore(
         newContainer,
         contentContainer.nextSibling
       );
     });
 
-    // Optionally remove the original static container
     contentContainer.remove();
   } catch (error) {
     console.error("Failed to fetch articles:", error);

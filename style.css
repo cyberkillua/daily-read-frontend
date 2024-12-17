@@ -12,8 +12,8 @@ html {
 
 body {
   background-color: rgb(26, 27, 38, 1);
-  color: rgb(125, 207, 255, 1);
-  font-family: "Caveat", cursive;
+  color: #79a2f7;
+  font-family: "Oxanium", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -41,7 +41,7 @@ body {
 }
 .subtitle {
   font-weight: 200;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .content-container {
@@ -49,7 +49,7 @@ body {
 }
 
 .title-article {
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: capitalize;
   text-decoration: underline;
   margin-bottom: 5rem;
@@ -60,8 +60,17 @@ body {
   font-optical-sizing: auto;
   font-weight: "700";
   /* color: white; */
+  color: #c0caf4;
 }
 a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
+}
+
+.article-name {
+  font-size: 1.2rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: "700";
+  color: white;
 }
