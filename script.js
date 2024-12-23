@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch(
-      "https://dailyread-vj86.onrender.com/v1/posts"
+      "https://web-jpzt58zez9q3.up-de-fra1-k8s-1.apps.run-on-seenode.com/v1/posts"
     );
-
+   
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
