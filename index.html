@@ -2,32 +2,110 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Daily Read</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Daily Read</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Share Tech Mono", monospace;
+        background-color: #0a0a0a;
+        color: #00ff00;
+        line-height: 1.6;
+        padding: 20px;
+      }
+      .container {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 2px solid #00ff00;
+        padding-bottom: 20px;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      .blog-list {
+        list-style-type: none;
+      }
+      .blog-item {
+        background-color: #111;
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #00ff00;
+        box-shadow: 0 0 10px #00ff00;
+        transition: all 0.3s ease;
+      }
+      .blog-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px #00ff00;
+      }
+      .blog-title {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+      .blog-title a {
+        color: #00ffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .blog-title a:hover {
+        color: #ff00ff;
+      }
+      .blog-meta {
+        font-size: 0.9em;
+        color: #888;
+      }
+      .blog-source {
+        color: #ff00ff;
+      }
+      .blog-date {
+        float: right;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        .container {
+          max-width: 100%;
+        }
+        h1 {
+          font-size: 2em;
+        }
+        .blog-item {
+          padding: 10px;
+        }
+        .blog-date {
+          float: none;
+          display: block;
+          margin-top: 5px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="header">
-      <h1 class="title">Daily Read.</h1>
-      <p class="subtitle">
-        All of my favorite blogs and articles in one place.
-      </p>
-    </div>
-    <hr width="70%" color="grey" size="1px" />
-
-    <div class="content-container">
-      <p class="article-link"></p>
-      <a href="" target="_blank">
-        <p class="title-article"></p>
-      </a>
+    <div class="container">
+      <header>
+        <h1>Daily Read</h1>
+      </header>
+      <main>
+        <ul class="blog-list">
+          <!-- Blog items will be dynamically inserted here -->
+        </ul>
+      </main>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="newscript.js"></script>
 </html>
